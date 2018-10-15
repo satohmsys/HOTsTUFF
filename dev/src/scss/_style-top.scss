@@ -23,6 +23,7 @@
     overflow: hidden;
     position: relative;
 
+
     img{
         width: 110%;
         height: auto;
@@ -39,6 +40,8 @@
 
 
 .section{
+    display: flex;
+    align-items: center;
 
     position: relative;
 
@@ -49,7 +52,7 @@
 
 
     &__index{
-        margin-bottom: $space_s;
+        margin-bottom: $space_m;
 
         &__en{
             margin-bottom: 20px;
@@ -182,15 +185,17 @@
         height: 0;
         margin-top: auto;
         margin-bottom: auto;
-        padding-top:percentage( 668 / 768 ) ;
+        padding-top: #{( 668 / 768 * 100 )}vh ;
         overflow: hidden;
         position: absolute;
         top: 0;
-        right: percentage( 20 / 1366 );
+        right: percentage( 40 / 1366 );
         bottom: 0;
-        transition: transtion();
+        transition: transition();
 
         video{
+            width: 100%;
+            height: auto;
             margin: auto;
             position: absolute;
             top: 0;
@@ -199,6 +204,25 @@
             left: 0;
             opacity: 0.15;
             transition: transtion();
+        }
+
+
+        .mask{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+            &:before{
+                background-color: #ffffff;
+                animation-delay: 0.75s;
+            }
+            &__element{
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                transition-delay: 1s;
+            }
         }
     }
 
@@ -247,6 +271,24 @@
             bottom: 0;
             left: 0;
         }
+
+        // .mask{        
+        //     width: 100%;
+        //     position: absolute;
+        //     top: 0;
+        //     bottom: 0;
+
+        //     &:before{
+        //         background-color: #ffffff;
+        //         animation-delay: 0.75s;
+        //     }
+        //     &__element{
+        //         height: 100%;
+        //         top: 0;
+        //         bottom: 0;
+        //         transition-delay: 1s;
+        //     }
+        // }        
     }
 
 }
@@ -367,4 +409,197 @@
         }
     }
 
+}
+
+
+
+/////////////////////////
+
+// faetures
+
+/////////////////////////
+
+.section--features{
+
+    .inner{
+        max-width: 800px;
+    }
+
+    .features{
+        margin-top: $space_s*-1;   
+        display: flex;
+        flex-wrap: wrap;
+
+        .feature{
+            width: 380px;
+            margin-top: $space_s;
+            padding-bottom: $space_m;
+            list-style: none;
+            position: relative;
+
+            &:after{
+                content: "";
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: $color_border;
+            }
+
+            &:nth-child( odd ){
+                margin-right: $space_s;
+            }
+
+
+            &__index{
+                margin-bottom: $space_s;
+                box-sizing: border-box;
+
+                &__en{
+                    line-height: 1;
+                    margin-top: 0;
+                    font-family: $fontFamily_en;
+                    font-size: $fontsize_l;
+                    color: #666666;
+                    transition: transition(all, 0.5s );
+                }
+                &__ja{
+                    font-weight: bold;
+                    font-size: $fontsize_index_s;
+                    transition: transition(all, 0.5s );
+                }
+            }
+
+            &__img{
+                width: 100%;
+                height: 0;
+                margin-bottom: $space_s;
+                overflow: hidden;
+                padding-top: 300px;
+                box-sizing: border-box;
+                position: relative;
+                // padding: 40px;
+
+            }
+
+            .imgInFrame{
+                width: 100%;
+                padding-top: 60% ;
+                position: absolute;
+                top: 0;
+            }
+
+
+
+            &__content{
+                display: inline-flex;
+            }
+
+
+
+            &__details{
+                text-align: left;
+
+            }
+
+            &__detail{
+                line-height: 1;
+                position: relative;
+                margin-bottom: 2em;
+                list-style: none;
+
+
+                &__index{
+                    margin-bottom: 1em;
+                    font-weight: bold;
+
+                    &:before{
+                        content: " ";
+                        width: 2px;
+                        height: 2px;
+                        margin-right: 1em;
+                        display: inline-block;
+                        vertical-align: middle;
+                        border-radius: 4px;
+                        background-color: $basefontColor;
+                    }
+                }
+
+                &__work{
+                    text-indent: 1.5em;
+                }
+            }
+        }
+    }
+}
+
+
+
+/////////////////////////
+
+// conact
+
+/////////////////////////
+
+.section--contact{
+
+    .contactHere{
+        width: percentage( 850 / 1366 );
+        height: 300px;
+        margin-right: auto; 
+        margin-left: auto;
+        position: relative;
+        overflow: hidden;
+
+
+        .button{
+            width: percentage( 600/850 );
+            min-width: 300px;
+            height: 150px;
+            font-size: $fontsize_xl;
+        }
+
+
+        &__text{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+
+            p{
+                margin-top: $space_s;
+            }
+            
+        }
+
+        &__bg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            
+        }
+
+        .mask{
+            &:before{
+                background-color: #ffffff;
+            }
+        }
+
+        video{
+            opacity: 0.15;
+
+        }
+        
+    }
+   
 }

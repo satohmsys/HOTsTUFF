@@ -276,3 +276,64 @@ body{
 
 }
 
+
+
+.siteNav{
+	position: fixed;
+	z-index: 10;
+	top: 50%;
+	right: 0;
+	transform: translateY( -50% );
+
+	li{
+		width: 120px;
+		line-height: 1;
+		margin-bottom: 10px;
+		list-style: none;
+
+		a{
+			width: 100%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			display: flex;
+			align-items: center;
+			position: relative;
+			color: #666666;
+			transition: transition();
+			font-family: $fontFamily_en;
+
+
+			&.current{
+				font-weight: bold;
+
+				&:after{
+					width: 0px;
+				}
+			}
+
+
+
+			&:before,
+			&:after{
+				content: " ";
+				height: 1px;
+				margin-top: auto;
+				margin-bottom: auto;
+				transition: transition();
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
+			&:after{
+				width: 40px;
+				background-color: #666;
+			}
+			@include mouseOver(){
+				&:after{
+					width: 0;
+				}
+			}
+		}
+	}
+}

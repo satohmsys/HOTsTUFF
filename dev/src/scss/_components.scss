@@ -75,15 +75,54 @@
 }
 
 
+
 ////////////////////
 
 // mask efffect
 
 ////////////////////
 
-.js-effect {
-    
-}
-.-on{
-   
+// .js-effect {
+    .mask{
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        &:before{
+            content: " ";
+            width: 0%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            transition: transition();
+            transition-delay: 0.15s;
+            background-color: $basefontColor;
+            will-change: width;
+        }
+        &__element{
+            white-space: nowrap;
+            display: inline-block;
+            transform: translateX( -100% );
+            transition: transition(all, 0.5s);
+            transition-delay: 0.235s;
+            will-change: transform;            
+        }
+    }
+// }
+.-on,
+.current{
+    .mask{
+        &:before{
+            content: " ";
+            left: auto;
+            right: 0;
+            animation: maskmove 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.15s 1 normal;
+        }
+        &__element{
+            white-space: normal;
+            display: inherit;
+            transform: translateX( 0% );
+        }            
+    }
 }

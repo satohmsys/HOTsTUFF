@@ -9,7 +9,8 @@
 <body class="top">
 	<%# include( '_include/_loadingAnim.ejs' ); %>
 	<%- include( '_include/header.ejs' ); %>
-	<section class="section mv">
+	<%- include( '_include/nav.ejs' ); %>
+	<section id="concept" class="section section--concept mv js-effect">
 		<article class="wrap mv__copy">
 			 <header class="mv__index">
 				<span class="mv__copy__line"><span class="mask"><span class="mask__element">あっ、と驚かすクリエイティブな発想で、</span></span></span><br>
@@ -23,17 +24,17 @@
 			 </p>
 		</article>
 		<div class="mv__img">
-			<video autoplay loop src="/assets/img/mv-video.mp4" />
+			<span class="mask"><span class="mask__element"><video width="100%" height="100%" autoplay loop src="/assets/img/mv-video.mp4" /></span></span>
 		</div>
 	</section>
 	<main>
 		<!-- *****vision -->
-		<section class="section section--vision">
+		<section id="vision" class="section section--vision">
 			<div class="wrap">
 				<div class="visionContent">
 					<header class="section__index">
-						<p class="section__index__en">EXPERIENCE CONSULTING</p>
-						<h2 class="section__index__ja">体験のトータルコンサルティング</h2>
+						<p class="section__index__en"><span class="mask"><span class="mask__element">EXPERIENCE CONSULTING</span></span></p>
+						<h2 class="section__index__ja"><span class="mask"><span class="mask__element">体験のトータルコンサルティング</span></span></h2>
 					</header>
 					<div class="section__content">
 						<p>
@@ -68,13 +69,14 @@
 						<span>VISION</span>
 						<span>VISION</span>
 						<span>VISION</span>
+						<span>VISION</span>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- ///// -->
 		<!-- *****services -->
-		<section class="section section--services">
+		<section id="services" class="section section--services">
 			<div class="wrap">
 				<div class="visionContent">
 					<header class="section__index">
@@ -111,7 +113,7 @@
 												一般住宅・マンション等
 											</h4>
 											<div class="service__detail__work">
-												内装工事設計・施工・管理												
+												内装工事設計・施工・管理
 											</div>
 										</li>
 										<li class="service__detail">
@@ -156,15 +158,16 @@
 										</li>
 									</ul>
 								</div>
-							</li> 
+							</li>
 						</ul>
-						
+		
 					</div>
-				</div>		
+				</div>
 			</div>
 			<div class="section__ticker">
 				<div class="section__ticker__wrap">
 					<div class="section__ticker__marquee">
+						<span>SERVICES</span>
 						<span>SERVICES</span>
 						<span>SERVICES</span>
 						<span>SERVICES</span>
@@ -176,8 +179,90 @@
 			</div>
 		</section>
 		<!-- ///// -->
+		<!-- *****features -->
+		<section id="features" class="section section--features">
+			<div class="wrap">
+				<div class="visionContent">
+					<header class="section__index">
+						<p class="section__index__en">WHO WE ARE ?</p>
+						<h2 class="section__index__ja">私達が選ばれる理由</h2>
+					</header>
+					<div class="section__content">
+						<ul class="features inner">
+							<li class="feature">
+								<header class="feature__index">
+									<p class="feature__index__en">EXPERIENCES</p>
+									<h3 class="feature__index__ja">ノウハウ</h3>
+								</header>
+								<div class="feature__content">
+									蓄積した豊富な経験と知識を生かし、<br>
+									様々な業種のご要望にお応えします。
+								</div>
+							</li>
+							<li class="feature">
+								<header class="feature__index">
+									<p class="feature__index__en">PROFESSIONS</p>
+									<h3 class="feature__index__ja">プロフェッションズ</h3>
+								</header>
+								<div class="feature__content">
+									建築とICTの分野の知識を持ったプロフェッショナル集団がお客様に高品質なサービスを提供します。
+								</div>
+							</li>
+							<li class="feature">
+								<header class="feature__index">
+									<p class="feature__index__en">PHILOSOPHY</p>
+									<h3 class="feature__index__ja">フィロソフィ</h3>
+								</header>
+								<div class="feature__content">
+									高品質な空間を提供したいという熱意があります。
+		
+								</div>
+							</li>
+							<li class="feature">
+								<header class="feature__index">
+									<p class="feature__index__en">NETWORK</p>
+									<h3 class="feature__index__ja">ネットワーク</h3>
+								</header>
+								<div class="feature__content">
+									不動産事業のグループ会社と連携し、不動産の仲介から空間デザインまでをトータルサポートします。
+								</div>
+							</li>
+						</ul>
+		
+					</div>
+				</div>
+			</div>
+			<div class="section__ticker">
+				<div class="section__ticker__wrap">
+					<div class="section__ticker__marquee">
+						<span>FEATURES</span>
+						<span>FEATURES</span>
+						<span>FEATURES</span>
+						<span>FEATURES</span>
+						<span>FEATURES</span>
+						<span>FEATURES</span>
+						<span>FEATURES</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ///// -->
+		<!-- *****features -->
+		<section id="contact" class="section section--contact">
+			<div class="wrap">
+				<div class="contactHere">
+					<div class="contactHere__text">
+						<div class="button"><a href="">CONTACT US</a></div>
+						<p>お気軽にお問い合わせください。</p>
+					</div>
+					<div class="contactHere__bg">
+						<span class="mask"><span class="mask__element"><video width="100%" height="100%" autoplay loop src="/assets/img/mv-video.mp4" /></span></span>
+					</div>
 
-
+				</div>
+			</div>
+		</section>
+		<!-- ///// -->
 	</main>
 	<%- include( '_include/footer.ejs' ); %>
 </body>

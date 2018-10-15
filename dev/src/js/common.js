@@ -125,18 +125,18 @@ if ($loadingAnim.length ) {
 /**
  * smooth scroll
  */
-$('a[href^="#"]').click(function ( e ) {
-	e.stopPropagation();
-	e.preventDefault();
+// $('a[href^="#"]').click(function ( e ) {
+// 	e.stopPropagation();
+// 	e.preventDefault();
 
-	var speed = 500,
-		href = $(this).attr("href"),
-		target = $(href == "#" || href == "" ? 'html' : href),
-		position = target.offset().top - $('.siteHeader' ).height();
+// 	var speed = 500,
+// 		href = $(this).attr("href"),
+// 		target = $(href == "#" || href == "" ? 'html' : href),
+// 		position = target.offset().top - $('.siteHeader' ).height();
 
-	$("html, body").animate({ scrollTop: position }, speed, "swing");
-	return false;
-});
+// 	$("html, body").animate({ scrollTop: position }, speed, "swing");
+// 	return false;
+// });
 $( '.scrollTop' ).on( 'click', function( e ){
 	e.stopPropagation();
 	e.preventDefault();
