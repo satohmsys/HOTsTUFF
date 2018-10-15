@@ -1,0 +1,184 @@
+<% 
+	include( '_include/_function.ejs' );
+	$path = './';
+	$active = 'top';
+%>
+<!DOCTYPE html>
+<html>
+<%- include( '_include/head.ejs' ); %>
+<body class="top">
+	<%# include( '_include/_loadingAnim.ejs' ); %>
+	<%- include( '_include/header.ejs' ); %>
+	<section class="section mv">
+		<article class="wrap mv__copy">
+			 <header class="mv__index">
+				<span class="mv__copy__line"><span class="mask"><span class="mask__element">あっ、と驚かすクリエイティブな発想で、</span></span></span><br>
+				<span class="mv__copy__line"><span class="mask"><span class="mask__element">「日常」を変えていこう。</span></span></span>
+			 </header>
+			 <p class="mv__content">
+				<span class="mv__copy__line"><span class="mask"><span class="mask__element">人びとが快適に、楽しく、効率的に過ごすことのできる空間を。</span></span></span><br>
+				<span class="mv__copy__line"><span class="mask"><span class="mask__element">そして、その空間にぴったりのITを添えることで新たな体験を。</span></span></span><br>
+				<span class="mv__copy__line"><span class="mask"><span class="mask__element">デザインと、ITの力で今までにないクリエイティブな『時間の過ごし方』を創リ出すことで、</span></span></span><br>
+				<span class="mv__copy__line"><span class="mask"><span class="mask__element">私たちは皆様のビジネスに貢献します。</span></span></span>
+			 </p>
+		</article>
+		<div class="mv__img">
+			<video autoplay loop src="/assets/img/mv-video.mp4" />
+		</div>
+	</section>
+	<main>
+		<!-- *****vision -->
+		<section class="section section--vision">
+			<div class="wrap">
+				<div class="visionContent">
+					<header class="section__index">
+						<p class="section__index__en">EXPERIENCE CONSULTING</p>
+						<h2 class="section__index__ja">体験のトータルコンサルティング</h2>
+					</header>
+					<div class="section__content">
+						<p>
+							空間。<br>
+							家・会社・街・店舗・交通____。<br>
+							日常の中で私たちは常にありとあらゆる空間で時を過ごします。<br>
+							時に息が詰まりそうになる現代において、<br>
+							少しでも一瞬一瞬を大切にできるように、<br>
+							もっと快適に豊かに過ごして欲しいと考えました。
+						</p>						
+						<p>
+							全ての空間をもっとクリエイティブに。<br>
+							そんな想いからプロフェッショナルとして<br>
+							“＋αの付加価値“を生み出し、<br>
+							「価値のある本物の空間を実感して欲しい」<br>
+							私たちの事業コンセプトです。
+						</p>
+
+					</div>
+				</div>
+				<div class="visionImg imgInframe">
+					<img src="<%- $path %>../img/vision-img.jpg" width="675" alt="">
+				</div>
+
+			</div>
+			<div class="section__ticker">
+				<div class="section__ticker__wrap">
+					<div class="section__ticker__marquee">
+						<span>VISION</span>
+						<span>VISION</span>
+						<span>VISION</span>
+						<span>VISION</span>
+						<span>VISION</span>
+						<span>VISION</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ///// -->
+		<!-- *****services -->
+		<section class="section section--services">
+			<div class="wrap">
+				<div class="visionContent">
+					<header class="section__index">
+						<p class="section__index__en">WHAT WE DO ?</p>
+						<h2 class="section__index__ja">私達の事業</h2>
+					</header>
+					<div class="section__content">
+						<ul class="services inner">
+							<li class="service">
+								<div class="service__img">
+									<header class="service__index">
+										<p class="service__index__en">Designing</p>
+										<h3 class="service__index__ja">
+											空間デザイン<br>
+											コンストラクション
+										</h3>
+									</header>
+									<div class="imgInFrame">
+										<img src="<%- $path %>../img/services-designing-img.jpg" width="500" alt="">
+									</div>
+								</div>
+								<div class="service__content">
+									<ul class="service__details">
+										<li class="service__detail">
+											<h4 class="service__detail__index">
+												ホテル・店舗・オフィス・工場等
+											</h4>
+											<div class="service__detail__work">
+												商業施設の設計・施工・管理
+											</div>
+										</li>
+										<li class="service__detail">
+											<h4 class="service__detail__index">
+												一般住宅・マンション等
+											</h4>
+											<div class="service__detail__work">
+												内装工事設計・施工・管理												
+											</div>
+										</li>
+										<li class="service__detail">
+											<h4 class="service__detail__index">
+												マンション・商業ビル等
+											</h4>
+											<div class="service__detail__work">
+												外壁改修工事施工・管理
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="service">
+								<div class="service__img">
+									<header class="service__index">
+										<p class="service__index__en">Consulting</p>
+										<h3 class="service__index__ja">
+											ICTコンサルティング
+										</h3>
+									</header>
+									<div class="imgInFrame">
+										<img src="<%- $path %>../img/services-consulting-img.jpg" width="500" alt="">
+									</div>
+								</div>
+								<div class="service__content">
+									<ul class="service__details">
+										<li class="service__detail">
+											<h4 class="service__detail__index">
+												プロジェクトマネジメント
+											</h4>
+										</li>
+										<li class="service__detail">
+											<h4 class="service__detail__index">
+												OA事務サポート
+											</h4>
+										</li>
+										<li class="service__detail">
+											<h4 class="service__detail__index">
+												システム構築・提案
+											</h4>
+										</li>
+									</ul>
+								</div>
+							</li> 
+						</ul>
+						
+					</div>
+				</div>		
+			</div>
+			<div class="section__ticker">
+				<div class="section__ticker__wrap">
+					<div class="section__ticker__marquee">
+						<span>SERVICES</span>
+						<span>SERVICES</span>
+						<span>SERVICES</span>
+						<span>SERVICES</span>
+						<span>SERVICES</span>
+						<span>SERVICES</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ///// -->
+
+
+	</main>
+	<%- include( '_include/footer.ejs' ); %>
+</body>
+</html>

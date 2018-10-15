@@ -1,0 +1,89 @@
+//////////////////////////////////////////
+
+//components
+
+//include by style.scss
+
+//////////////////////////////////////////
+
+
+////////////////////
+
+// button element
+
+////////////////////
+
+.button{
+    width: 300px;
+    height: 100px;
+    line-height: 1;
+  a{
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        box-sizing: border-box;
+      position: relative;
+      font-family: $fontFamily_en;
+      color: #ffffff;
+      background-color: $basefontColor;
+
+      @include mouseOver(){
+          &:before{
+              width: 100%;
+              left: 0;
+              right: auto;
+          }
+          &:after{
+              width: 0;
+            left: auto;
+            right: -15px;
+
+          }
+      }
+
+      &:before{
+          content: " ";
+          width: 0%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+          display: block;
+          transition: transition();
+            background-color: rgba( #fff, 0.1 );
+      }
+
+
+      &:after{
+          content: " ";
+          width: 30px;
+          height: 1px;
+          margin: auto;
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: calc( 100% - 15px );
+          transition: transition();          
+          background-color: #ffffff;
+      }
+  }
+}
+
+
+////////////////////
+
+// mask efffect
+
+////////////////////
+
+.js-effect {
+    
+}
+.-on{
+   
+}

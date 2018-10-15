@@ -1,0 +1,375 @@
+// @import "colors.scss";
+// @import "variables.scss";
+// @import "fonts.scss";
+// @import "mixins.scss";
+// ////////////////////////////////////////
+
+
+// // concat
+
+
+// ////////////////////////////////////////
+// .subpage--contact{
+
+
+// ////////////////////
+
+// // mainvisual
+
+// ////////////////////
+
+// .mv{
+
+//     .wrap{
+//         padding-top: 160px;
+//         height: 400px;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+
+//         @include mq( sp ){
+//             height: auto;
+//             padding-top: $space_m_sp*2;
+//             padding-bottom: $space_m_sp;
+//             background-color:rgba( $basefontColor,0.03);            
+//         }        
+//     }
+
+//     &__copy--en{
+//         line-height: 1;
+//         margin-bottom: $space_s;
+//         font-family: $fontFamily_en;
+//         font-size: $fontsize_index_l;
+//         font-weight: 900;
+//         color: $color_text_index_s;
+
+
+//         @include mq( sp ){
+//             // font-size: $fontsize_index_l_sp;
+//         }
+
+
+// 		span{
+// 			// line-height: 0;
+//             display: inline-block;
+//             margin-right: 8px;
+// 		}
+// 		&.js-effect span{
+// 			transform: translateY(10px);
+// 			opacity: 0;
+// 			transition: transition();
+// 		}
+// 		&.-on span{
+//             opacity: 1;
+// 			transform: translateY(0);
+// 		}		
+		
+//         @for $i from 0 through 10 {
+//             &.js-effect span:nth-child( #{$i} ) {
+// 					transition-delay: #{0.05*$i}s;
+//             }
+//         }        
+//     }
+
+//     &__copy--ja{
+//         line-height: 1;
+//         margin-bottom: $space_s;
+//         font-weight: 900;
+//     }
+
+//     &__desciption{
+//         line-height: 2;
+//     }
+
+// }
+
+
+
+// ////////////////////
+
+// // form
+
+// ////////////////////
+
+// .formTable{
+
+//     max-width: 1000px;
+
+//     input[ type="text" ],
+//     input[ type="email" ],
+//     textarea{
+//         width: 100%!important;
+//         box-sizing: border-box;
+//         padding: 1em;
+//         border: 1px solid $color_border;
+//         border-radius: 3px;
+//         -webkit-appearance: none;
+
+//         @include mq( tab ){
+//             font-size: 1.6rem;
+//         }
+//     }
+    
+//     textarea{
+//         min-height: 100px;
+//     }
+//     input[ type="text" ],
+//     input[ type="email" ]{
+//         min-height: 72px;        
+//     }
+    
+
+
+//     ///// radio button 列
+//     &__radio{
+
+//         margin-right: $space_s;
+//         cursor: pointer;
+
+//         @include mq( sp ){
+//             margin-right: 1em;
+//         }               
+
+//         input[ type="radio" ]{
+//             display: none;
+//         }
+//         i{
+//             width: 20px;
+//             height: 20px;
+//             margin-right: 5px;
+//             position: relative;
+//             display: inline-block;
+//             vertical-align: middle;
+//             border-radius: 100%;
+//             background-color: #f2f2f2;
+            
+//             &:before{
+//                 content: " ";
+//                 width: 10px;
+//                 height: 10px;
+//                 margin: auto;
+//                 position: absolute;
+//                 top: 0;
+//                 right: 0;
+//                 bottom: 0;
+//                 left: 0;
+//                 transition: transition();
+//                 transform: scale( 0 );
+//                 border-radius: 100px;
+//                 background-color: $basefontColor;
+//             }
+//         }
+//         input[ type="radio" ]:checked ~ i{
+//             &:before{
+//                 transform: scale( 1 );
+//             }
+//         }
+
+//     }
+
+//     &__row{
+//         margin-bottom: $space_s;
+//         display: flex;
+//         align-items: center;
+
+//         @include mq( sp ){
+//             flex-direction: column;
+//             align-items: flex-start;
+//         }        
+        
+
+//         dt{
+//             width: 170px;
+//             line-height: 1.34;
+//             flex-shrink: 0;
+//             font-weight: bold;
+
+//             @include mq( sp ){
+//                 margin-bottom: 20px;
+//             }  
+
+
+//             &.must{
+//                 &:after{
+//                     content:"※必須";
+//                     display: block;
+//                     color: $brown;
+//                     font-size: $fontsize_s;
+
+//                     @include mq( sp ){
+//                         display: inline-block;
+//                         margin-left: 5px;
+//                         vertical-align: text-bottom;
+//                     }                      
+//                 }
+//             }
+//         }
+
+//         dd{
+//             margin-left: 0;
+//             width: 100%;
+//         }
+
+//     }
+
+
+//     &__row--button{
+//         margin-top: $space_m;
+
+//         .buttons{
+//             display: flex;
+//             justify-content: center;
+            
+            
+//             @include mq( sp ){
+//                 display: flex;
+//                 flex-direction: column;
+//             }
+
+
+//             .button:not( :last-child ){
+//                 margin-right: percentage( 40 / 1000 );
+          
+          
+//                 @include mq( sp ){
+//                     margin-bottom: 20px;
+//                 }
+                
+//             }
+
+//             .button{
+//                 width: 100%;
+//                 max-width: 480px;
+
+//             }
+//             button{
+//                 font-size: 1.6rem;         
+//             }
+//         }
+
+//     }
+
+
+//     ///////// plugin
+//     .mfp_err{
+//         margin-top: 5px;
+//         padding: 1em;
+//         position: relative;
+//         font-size: $fontsize_s;
+//         font-weight: bold;
+//         background-color: $skincolor;
+
+
+//         &:empty{
+//             display: none;
+//         }
+//     }
+// }
+
+// ///////// plugin 
+
+//     #mfp_hidden,
+//     div#mfp_loading{
+//         display: none;
+//     }
+//     div#mfp_loading_screen {
+//         max-width: 100%;
+//         z-index: 20000;
+//         opacity: 0.45;
+//         display: none;
+//         background-color: #fff;
+//     }
+//     div#mfp_overlay {
+//         max-width: 100%;
+//         position: absolute;
+//         display: none;
+//         z-index: 10001;
+//     }
+//     div#mfp_overlay_background{
+//         max-width: 100%;
+//         opacity: 0.93;
+//         display: none;
+//         background-color: $brown;
+//         backface-visibility: hidden;
+//     }
+//     div#mfp_overlay_inner {
+//         background-color: #FFF;
+//         padding: $space_s;
+//         margin: 0px auto;
+//         border-radius: 0px;
+//         width: 800px;
+//         max-width: 90%;
+
+//         @include mq( sp ){
+//             padding: 20px;
+//             box-sizing: border-box;
+//         }
+//     }
+
+//     div#mfp_overlay_inner h4{ 
+//         font-weight: bold;
+//         color: $color_text_index_s;
+//     }
+
+
+//     #mfp_confirm_table{
+//         width: 100%;
+//         table-layout: fixed;
+//         border-collapse: collapse;
+
+//         @include mq( sp ){
+//             font-size: $fontsize_s;
+//             line-height: 1.4;
+//         }        
+//     }
+
+//     #mfp_confirm_table th{
+//         width: 100px;
+//         text-align: left;
+//         padding-right: 20px;
+
+//         @include mq( sp ){
+//             width: 90px;
+//             padding-right: 10px;
+//         }
+//     }
+//     #mfp_confirm_table tr{
+//           border-bottom: 1px solid $color_border; 
+//     }
+
+//     #mfp_confirm_table tr,
+//     #mfp_confirm_table th,
+//     #mfp_confirm_table td
+//     {
+//         padding-top: 15px;
+//         padding-bottom: 15px;
+//         word-wrap: break-word;
+//     }
+
+
+//     ///// button
+//     .mfp_buttons{
+//         margin-top: $space_s;
+//         display: flex;
+//         justify-content: center;
+
+//         @include mq( tab ){
+//             font-size: 1.6rem;
+//         }         
+//         @include mq( sp ){
+//             margin-top: 20px;
+//         }           
+//     }
+//     #mfp_button_send{
+//         width: 50%;
+//         @extend %buttonStyle;
+//     }
+
+//     #mfp_button_cancel{
+//         width: 50%;
+//         @extend %buttonStyle;
+// 		background-color: $brown_ash;
+//     }
+
+
+// }
