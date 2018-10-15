@@ -49,6 +49,10 @@ body{
 		@include mq( 1920, min ){
 			width: 20vw;
 		}
+		@include mq( sp ){
+			width: 35vw;
+			height: 60px;
+		}
 	}
 	
 
@@ -102,79 +106,25 @@ body{
 
 
 .siteFooter{
-	padding-top: 50px;
-	padding-bottom: 70px;
-	background-color: #f2f2f2;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	right: 0;
+	bottom: 1em;
+	left: 0;
 
 	@include mq( tab ){
-		margin-top: $space_l_sp;
-		padding-top: 60px;
-		padding-bottom: 60px;
 	}
 
 	a{
 		color: inherit;
 	}
 
-	.wrap{
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-
-		@include mq( sp ){
-			flex-direction: column;
-		}
-	}
-
-	&__copy{
-	}
-	
-	&__nav{
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-
-		@include mq( sp ){
-			flex-direction: column;
-		}
-
-
-		&__logo{
-			line-height: 1;
-			margin-right: 50px;
-
-			@include mq( sp ){
-				margin-right: 0;
-				margin-bottom: 30px;
-			}
-
-		}
-
-		ul{
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;			
-		}
-
-		li{
-			list-style: none;
-
-			&:not( :last-child ){
-				margin-right: $space_s;
-			
-				@include mq( tab ){
-					margin-right: 25px;
-				}					
-			}
-		}
-	}
-
 
 	&__copyright{
-		margin-left: auto;
-		font-size: $fontsize_s;
+		opacity: 0.5;
+		font-family: $fontFamily_en;
+		font-size: 1rem;
 
 		@include mq( sp ){
 			margin-left: 0;
@@ -285,11 +235,46 @@ body{
 	right: 0;
 	transform: translateY( -50% );
 
+	@include mq( sp ){
+		width: 100%;
+		top: auto;
+		bottom: 0;
+		transform: none;
+	}	
+
+
+	ul{
+		@include mq( sp ){
+			width: 100%;
+			overflow: auto;
+			display: flex;
+			flex-wrap: nowrap;
+			-webkit-overflow-scrolling: touch;
+		}	
+	}
+
 	li{
 		width: 120px;
 		line-height: 1;
 		margin-bottom: 10px;
 		list-style: none;
+
+		@include mq( sp ){
+			width: auto;
+			flex-shrink: 0;
+			&:after{
+				content:" ";
+				width: 80px;
+				height: 1px;
+				margin-right: 0.5em;
+				margin-left: 0.5em;
+				display: inline-block;
+				vertical-align: middle;
+				background-color: $color_border;
+				mix-blend-mode: color-burn
+			}
+		}	
+
 
 		a{
 			width: 100%;
@@ -301,6 +286,12 @@ body{
 			color: #666666;
 			transition: transition();
 			font-family: $fontFamily_en;
+
+		@include mq( sp ){
+			display: inline-block;
+			vertical-align: middle;
+			width: auto;
+		}			
 
 
 			&.current{
@@ -324,6 +315,11 @@ body{
 				top: 0;
 				right: 0;
 				bottom: 0;
+
+
+				@include mq( sp ){
+					display: none;
+				}				
 			}
 			&:after{
 				width: 40px;

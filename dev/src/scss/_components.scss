@@ -70,6 +70,18 @@
           left: calc( 100% - 15px );
           transition: transition();          
           background-color: #ffffff;
+
+		@include mq( tab ){
+			width: 20px;
+              left: calc( 100% - 10px );
+
+		}
+		@include mq( sp ){
+			width: 14px;
+              left: calc( 100% - 7px );
+		}
+
+
       }
   }
 }
@@ -117,7 +129,7 @@
             content: " ";
             left: auto;
             right: 0;
-            animation: maskmove 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.15s 1 normal;
+            animation: maskmove 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.15s 1 normal;
         }
         &__element{
             white-space: normal;
