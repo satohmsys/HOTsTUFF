@@ -122,7 +122,7 @@
         }
     }
 // }
-.-on,
+// .-on,
 .current{
     .mask{
         &:before{
@@ -137,4 +137,22 @@
             transform: translateX( 0% );
         }            
     }
+}
+.-on{
+    @include mq( tab ){
+        .mask {
+            &:before {
+                content: " ";
+                left: auto;
+                right: 0;
+                animation: maskmove 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.15s 1 normal;
+            }
+
+            &__element {
+                white-space: normal;
+                display: inherit;
+                transform: translateX(0%);
+            }
+        }
+    } 
 }

@@ -45,6 +45,10 @@
 
     position: relative;
 
+    @include mq( tab ){
+        margin-bottom: $space_l_sp;
+    }    
+
     &[style *= "height" ]{
         display: flex;
         align-items: center;
@@ -61,11 +65,21 @@
             font-weight: 200;
             font-size: $fontsize_index_m;
             font-family: $fontFamily_en;
+
+            @include mq(sp) {
+                font-size: $fontsize_m_sp;
+                margin-bottom: 10px;
+            }
+
         }
         &__ja{
             font-feature-settings: "palt";
             font-size: $fontsize_index_m;
             font-weight: bold;
+
+            @include mq(sp) {
+                font-size: $fontsize_m_sp;
+            }
         }
     }
 
@@ -84,6 +98,11 @@
         font-weight: 400;
         overflow: hidden;
         mix-blend-mode: overlay;
+
+        @include mq( sp ) {
+            font-size: 8rem;
+        }
+
 
         &__wrap{
             width: 100%;
@@ -297,20 +316,38 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include mq( tab ){
+            flex-direction: column;
+            // align-items: flex-start;
+            justify-content: stretch;
+        }
     }
 
     .visionContent{
         padding-right: 100px;
 
+        @include mq(tab) {
+         padding-right: 0;
+         margin-bottom: $space_s_sp;
+        }
+
         .section__content{
             line-height: 2;
-            font-size: $fontsize_m;
+            @include mq(tab, min ) {
+                font-size: $fontsize_m;
+            }
         }
     }
 
     .visionImg{
         width: percentage( 613 / (1366*0.9));
         padding-top: 78vh;
+
+        @include mq(tab) {
+            width: 100%;
+            padding-top: percentage( 613 / 600 );
+        }
 
         overflow: hidden;
         position: relative;
@@ -367,6 +404,11 @@
     .services{
         display: flex;
 
+        @include mq( sp ){
+            flex-direction: column;
+        }        
+
+
         .service{
             width: 100%;
             text-align: center;
@@ -374,6 +416,12 @@
 
             &:first-child{
                 margin-right: 70px;
+
+                @include mq( sp ) {
+                    margin-right: 0;
+                    margin-bottom: $space_s_sp;
+                }
+
             }
 
             &__index{
@@ -386,6 +434,11 @@
                 left: 0;
                 z-index: 2;
 
+                @include mq( sp ) {
+                    padding: 25px;
+                }
+
+
                 &__en{
                     line-height: 1;
                     margin-top: 0;
@@ -397,6 +450,11 @@
                     font-weight: bold;
                     font-size: $fontsize_index_s;
                     transition: transition(all, 0.5s );
+
+                    @include mq(sp) {
+                        font-size: $fontsize_index_s_sp;
+                    }
+
                 }
             }
 
@@ -409,6 +467,14 @@
                 box-sizing: border-box;
                 position: relative;
                 // padding: 40px;
+
+                @include mq( 768, max, height ){
+                    padding-top: 180px;
+                }
+                @include mq(sp) {
+                    padding-top: 200px;
+                }
+
 
             }
 
@@ -458,8 +524,6 @@
                 &__work{
                     text-indent: 1.5em;
                 }
-
-
             }
         }
     }
@@ -493,6 +557,17 @@
             padding-bottom: $space_m;
             list-style: none;
             position: relative;
+        
+            @include mq(768, max, height) {
+                margin-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            @include mq(sp) {
+                width: 100%;
+                margin-top: 30px;
+            }
+
 
             &:after{
                 content: "";
@@ -506,12 +581,23 @@
 
             &:nth-child( odd ){
                 margin-right: $space_s;
+
+                @include mq(sp) {
+                    margin-right: 0px;
+                }
+
             }
 
 
             &__index{
                 margin-bottom: $space_s;
                 box-sizing: border-box;
+
+                @include mq(sp) {
+                    margin-bottom: $space_s_sp;
+
+                }
+
 
                 &__en{
                     line-height: 1;
@@ -520,11 +606,22 @@
                     font-size: $fontsize_l;
                     color: #666666;
                     transition: transition(all, 0.5s );
+
+                    @include mq(sp) {
+                        font-size: $fontsize_m_sp;
+                        margin-bottom: 10px;
+                    }
+
                 }
                 &__ja{
                     font-weight: bold;
                     font-size: $fontsize_index_s;
                     transition: transition(all, 0.5s );
+
+                    @include mq(sp) {
+                        font-size: 1em;
+                    }
+
                 }
             }
 
@@ -615,12 +712,24 @@
             height: 300px;
         }
 
+        @include mq(sp) {
+            width: 100%;
+            height: 250px;
+        }
+
+
 
         .button{
             width: percentage( 600/850 );
             min-width: 300px;
             height: 150px;
             font-size: $fontsize_xl;
+
+            @include mq(sp) {
+                height: 80px;
+                font-size: $fontsize_m_sp;
+            }
+
         }
 
 
@@ -637,6 +746,11 @@
             p{
                 margin-top: $space_s;
                 margin-bottom: calc( -1em - #{$space_s} );
+
+                @include mq(sp) {
+                    margin-bottom: calc(-1em - #{$space_s});
+                }
+
 
                 // @include mq( 1366 ){
                 //     mb

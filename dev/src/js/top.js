@@ -4,7 +4,7 @@ import 'jquery-scrollify';
 
 
 $( function(){
-
+	if( 1024 < $w.width() ){
 		$.scrollify({
 			section: ".section",
 			updateHash: false,
@@ -41,28 +41,7 @@ $( function(){
 				}
 			});
 		}
+	}
 
 });
 
-/**
- * インジケーター  
- */
-
-getScrollVal( function( scrollVal ){
-	// let $sections = $( '.section--catetory' ),
-	// 	$scrollBottom = scrollVal + $w.height()*1.1;
-
-	// $.each($sections, function( e ){
-	// 	let $section = $( this ),
-	// 		$section_offsets = $section.offset().top;
-	// 	if( $section_offsets < scrollVal ){
-	// 		let $id = $section.attr( 'id' );
-
-	// 		$( '.siteHeader__nav li a' ).removeClass( 'active' );
-	// 		$( '.siteHeader__nav li a[ href="#' + $id + '"]' ).addClass( 'active' );
-	// 	} else if ( scrollVal < 400) {
-	// 		 $('.siteHeader__nav li a').removeClass('active')
-	// 	}
-	// } )
-
-})

@@ -114,6 +114,8 @@ body{
 	left: 0;
 
 	@include mq( tab ){
+		margin-top: 100px;
+		position: static;
 	}
 
 	a{
@@ -237,6 +239,7 @@ body{
 
 	@include mq( sp ){
 		width: 100%;
+		padding-bottom: 1em;
 		top: auto;
 		bottom: 0;
 		transform: none;
