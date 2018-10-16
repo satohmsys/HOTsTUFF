@@ -4,7 +4,7 @@ import 'jquery-scrollify';
 
 
 $( function(){
-	if( 1024 < $w.width() ){
+	if (1024 < $w.width() && $('.siteNav').hasClass( '-is-scrollify-active')){
 		$.scrollify({
 			section: ".section",
 			updateHash: false,
@@ -18,15 +18,19 @@ $( function(){
 			}
 		});
 
-		$( '.siteNav li a' ).on( 'click', function( e ){
-			e.preventDefault();
-			e.stopPropagation();
 
+
+		$( '.siteNav li a' ).on( 'click', function( e ){
 			let $this = $( this ),
 				$href = $this.attr( 'data-index' );
+			e.stopPropagation();
 
-			$.scrollify.move( $this.index );
-		})
+			if( $href.length ){
+				e.preventDefault();
+				$.scrollify.move( '#' + $href );
+			}
+		});
+
 
 
 		function indicatorActivator( activePrefix ){
@@ -42,6 +46,19 @@ $( function(){
 			});
 		}
 	}
+
+
+	/**
+	 * current Section 
+	 */
+	$w.on('load', function (e) {
+		let $hash = location.hash;
+		if ($hash.length) {
+			$($hash).addClass('current');
+		} else {
+			$('.section').eq(0).addClass('current');
+		}
+	});
 
 });
 

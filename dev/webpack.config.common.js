@@ -127,12 +127,12 @@ let config = {
 			template: './src/ejs/index.ejs',
 			// inject: 'head',
 		}),	
-		// new HtmlWebpackPlugin({
-		// 	filename: 'thanks.html',
-		// 	// favicon: './src/img/common/favicon.ico',
-		// 	template: './src/ejs/thanks.ejs',
-		// 	// inject: 'head',
-		// }),											
+		new HtmlWebpackPlugin({
+			filename: 'about.html',
+			// favicon: './src/img/common/favicon.ico',
+			template: './src/ejs/about.ejs',
+			// inject: 'head',
+		}),											
 	],
 	resolve: {
 		extensions: ['.js', '.jsx', '.css', '.scss' ]

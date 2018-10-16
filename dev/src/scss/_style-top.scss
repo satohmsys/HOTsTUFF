@@ -54,9 +54,11 @@
         align-items: center;
     }
 
-
     &__index{
-        margin-bottom: $space_m;
+        margin-bottom: $space_s;
+        @include mq(768, min, height) {
+            margin-bottom: $space_m;
+        }
 
         &__en{
             margin-bottom: 20px;
@@ -119,8 +121,7 @@
 
         span{
             margin-right: 0.25em;
-        }
-        
+        }        
     }
 }
 
@@ -160,7 +161,6 @@
         }
 
 
-
        .mv__copy__line{
             margin-bottom: 0.5em;     
 
@@ -169,9 +169,9 @@
                 line-height: 1.65;
                 margin-bottom: 0;
             }                   
-        }
-         
+        }         
     }
+
 
     &__content{
         // font-weight: bold;
@@ -255,7 +255,7 @@
             }
 
 
-        video{
+        .videoElement{
             width: 100%;
             height: auto;
             margin: auto;
@@ -332,10 +332,16 @@
          margin-bottom: $space_s_sp;
         }
 
+        p:first-child{
+            margin-top: 0;
+        }
+
         .section__content{
             line-height: 2;
             @include mq(tab, min ) {
-                font-size: $fontsize_m;
+                @include mq( 768, min, height){
+                    font-size: $fontsize_m;
+                }
             }
         }
     }
@@ -343,14 +349,14 @@
     .visionImg{
         width: percentage( 613 / (1366*0.9));
         padding-top: 78vh;
+        overflow: hidden;
+        position: relative;
 
-        @include mq(tab) {
+        @include mq( tab ) {
             width: 100%;
             padding-top: percentage( 613 / 600 );
         }
 
-        overflow: hidden;
-        position: relative;
 
         img{
             width: 110%;
@@ -419,7 +425,7 @@
 
                 @include mq( sp ) {
                     margin-right: 0;
-                    margin-bottom: $space_s_sp;
+                    margin-bottom: $space_m_sp;
                 }
 
             }
@@ -783,4 +789,70 @@
         
     }
    
+}
+
+
+
+/////////////////////////
+
+// about
+
+/////////////////////////
+
+.section--about {
+
+    .section__child{
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        @include mq( tab ){
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    .companyInfoTable{
+        width: 100%;
+        border-collapse: collapse;
+
+        &__th,
+        &__td{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid $color_border;
+        }
+
+        &__th{
+            width: 170px;
+            text-align: left;
+            font-family: $fontFamily_en;
+            vertical-align: top;
+            font-weight: bold;
+
+            @include mq( sp ){
+                width: 140px;
+            }
+        }
+
+        td,
+        th{
+        }
+    }
+
+    .partners{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            list-style: none;
+
+            &:not( :last-child ):after{
+                content: ",";
+                margin-left: 5px;
+                margin-right: 1em;
+                display: inline-block;
+                vertical-align: text-bottom;
+            }
+        }
+    }
+
 }

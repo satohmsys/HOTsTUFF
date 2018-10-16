@@ -7,27 +7,29 @@
 <html>
 <%- include( '_include/head.ejs' ); %>
 <body class="top">
-	<%# include( '_include/_loadingAnim.ejs' ); %>
+	<%- include( '_include/_loadingAnim.ejs' ); %>
 	<%- include( '_include/header.ejs' ); %>
-	<%- include( '_include/nav.ejs' ); %>
-	<section id="concept" class="section section--concept mv js-effect">
-		<article class="wrap mv__copy">
-			 <header class="mv__index">
-				<span class="mv__copy__line"><span class="mask"><span class="mask__element">あっ、と驚かす<br class="-only-tab">クリエイティブな発想で、</span></span></span><br>
-				<span class="mv__copy__line"><span class="mask"><span class="mask__element">「日常」を変えていこう。</span></span></span>
-			 </header>
-			 <p class="mv__content">
-				<span class="mv__copy__line"><span class="mask"><span class="mask__element">人びとが快適に、楽しく、<br class="only-tab">効率的に過ごすことのできる空間を。</span></span></span><br>
-				<span class="mv__copy__line"><span class="mask"><span class="mask__element">そして、その空間にぴったりのITを<br class="-only-tab">添えることで新たな体験を。</span></span></span><br>
-				<span class="mv__copy__line"><span class="mask"><span class="mask__element">デザインと、ITの力で今までにない<br class="-only-tab">クリエイティブな<br class="-only-tab">『時間の過ごし方』を創り出すことで、</span></span></span><br>
-				<span class="mv__copy__line"><span class="mask"><span class="mask__element">私たちは皆様のビジネスに貢献します。</span></span></span>
-			 </p>
-		</article>
-		<div class="mv__img">
-			<span class="mask"><span class="mask__element"><video width="100%" height="100%" autoplay loop src="/assets/img/mv-video.mp4" /></span></span>
-		</div>
-	</section>
+	<%- include( '_include/nav.ejs', {scrollify: 'active'} ); %>
 	<main>
+		<!-- ***** mainv -->
+		<section id="concept" class="section section--concept mv js-effect">
+			<article class="wrap mv__copy">
+				<header class="mv__index">
+					<span class="mv__copy__line"><span class="mask"><span class="mask__element">あっ、と驚かす<br class="-only-tab">クリエイティブな発想で、</span></span></span><br>
+					<span class="mv__copy__line"><span class="mask"><span class="mask__element">「日常」を変えていこう。</span></span></span>
+				</header>
+				<p class="mv__content">
+					<span class="mv__copy__line"><span class="mask"><span class="mask__element">人びとが快適に、楽しく、<br class="-only-tab">効率的に過ごすことのできる空間を。</span></span></span><br>
+					<span class="mv__copy__line"><span class="mask"><span class="mask__element">そして、その空間にぴったりのITを<br class="-only-tab">添えることで新たな体験を。</span></span></span><br>
+					<span class="mv__copy__line"><span class="mask"><span class="mask__element">デザインと、ITの力で今までにない<br class="-only-tab">クリエイティブな<br class="-only-tab">『時間の過ごし方』を創り出すことで、</span></span></span><br>
+					<span class="mv__copy__line"><span class="mask"><span class="mask__element">私たちは皆様のビジネスに貢献します。</span></span></span>
+				</p>
+			</article>
+			<div class="mv__img">
+				<span class="mask"><span class="mask__element"><video class="videoElement" autoplay loop src="/assets/img/mv-video.mp4" /></span></span>
+			</div>
+		</section>
+		<!-- ///// -->
 		<!-- *****vision -->
 		<section id="vision" class="section section--vision js-effect">
 			<div class="wrap">
@@ -247,21 +249,8 @@
 			</div>
 		</section>
 		<!-- ///// -->
-		<!-- *****features -->
-		<section id="contact" class="section section--contact js-effect">
-			<div class="wrap">
-				<div class="contactHere">
-					<div class="contactHere__text">
-						<div class="button"><a href="">CONTACT US</a></div>
-						<p>お気軽にお問い合わせください。</p>
-					</div>
-					<div class="contactHere__bg">
-						<span class="mask"><span class="mask__element"><video autoplay loop src="/assets/img/mv-video.mp4" /></span></span>
-					</div>
-
-				</div>
-			</div>
-		</section>
+		<!-- *****contact -->
+		<%- include( '_include/contact.ejs' )%>
 		<!-- ///// -->
 	</main>
 	<%- include( '_include/footer.ejs' ); %>

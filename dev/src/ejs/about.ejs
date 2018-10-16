@@ -1,0 +1,82 @@
+<% 
+	include( '_include/_function.ejs' );
+	$path = './';
+	$active = 'top';
+    $meta.title="会社概要｜HOT STUFF"
+%>
+<!DOCTYPE html>
+<html>
+<%- include( '_include/head.ejs' ); %>
+<body class="about">
+	<%# include( '_include/_loadingAnim.ejs' ); %>
+	<%- include( '_include/header.ejs' ); %>
+	<%- include( '_include/nav.ejs', {scrollify: 'notactive'} ); %>
+	<main>
+		<!-- *****vision -->
+		<section id="vision" class="section section--about js-effect">
+			<div class="wrap">
+                <section class="section__child inner">
+                    <header class="section__index">
+                        <p class="section__index__en"><span class="mask"><span class="mask__element">CORPORATE PROFILE</span></span></p>
+                        <h2 class="section__index__ja"><span class="mask"><span class="mask__element">会社概要</span></span></h2>
+                    </header>
+                    <div class="section__content">
+                        <table class="companyInfoTable">
+                            <tr class="companyInfoTable__row">
+                                <th class="companyInfoTable__th">Company Name</th>
+                                <td class="companyInfoTable__td">株式会社ホットスタッフ</td>
+                            </tr>
+                            <tr class="companyInfoTable__row">
+                                <th class="companyInfoTable__th">President / CEO</th>
+                                <td class="companyInfoTable__td">加藤　実</td>
+                            </tr>
+                            <tr class="companyInfoTable__row">
+                                <th class="companyInfoTable__th">Established</th>
+                                <td class="companyInfoTable__td">1986 年5 月22 日</td>
+                            </tr>
+                            <tr class="companyInfoTable__row">
+                                <th class="companyInfoTable__th">Head Office</th>
+                                <td class="companyInfoTable__td">〒132-0021<br>
+                                    東京都江戸川区中央4-19-38 2F </td>
+                            </tr>
+                            <tr class="companyInfoTable__row">
+                                <th class="companyInfoTable__th">Confirmation</th>
+                                <td class="companyInfoTable__td">一般建設業　東京都知事許可　第89303号</td>
+                            </tr>
+                            <tr class="companyInfoTable__row">
+                                <th class="companyInfoTable__th">Capital</th>
+                                <td class="companyInfoTable__td">1,000 万円</td>
+                            </tr>
+                            <tr class="companyInfoTable__row">
+                                <th class="companyInfoTable__th">Tel</th>
+                                <td class="companyInfoTable__td">03-5678-1537</td>
+                            </tr>
+                            <tr class="companyInfoTable__row">
+                                <th class="companyInfoTable__th">Fax</th>
+                                <td class="companyInfoTable__td">03-5678-1538</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <section class="section__child inner">
+                    <header class="section__index">
+                        <p class="section__index__en"><span class="mask"><span class="mask__element">PARTNERS</span></span></p>
+                        <h2 class="section__index__ja"><span class="mask"><span class="mask__element">主要取引先</span></span></h2>
+                    </header>
+                    <div class="section__content">
+                      <ul class="partners">
+                        <% var $partners = new Array('株式会社A','株式会社B','株式会社C','株式会社D','株式会社E','株式会社F','株式会社G'); %>
+                          <% $partners.forEach( function( e ){ %><li><%- e %></li><% }) %>
+                      </ul>
+                    </div>
+                </section>                                    
+    		</div>
+		</section>
+		<!-- ///// -->
+		<!-- *****contact -->
+        <%- include( '_include/contact.ejs' )%>
+		<!-- ///// -->
+	</main>
+	<%- include( '_include/footer.ejs' ); %>
+</body>
+</html>
