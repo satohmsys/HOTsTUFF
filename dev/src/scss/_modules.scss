@@ -113,6 +113,11 @@ body{
 	bottom: 1em;
 	left: 0;
 
+	@at-root .about .siteFooter{
+		margin-top: 100px;
+		position: static;
+	}
+
 	@include mq( tab ){
 		margin-top: 100px;
 		position: static;

@@ -278,7 +278,6 @@
             bottom: 0;
             left: 0;
             opacity: 0.15;
-            transition: transtion();
 
 
     		@include mq( 1920,min ){
@@ -792,6 +791,8 @@
             
         }
 
+
+
         .mask{
             &,
             &__element{
@@ -807,10 +808,26 @@
             }
         }
 
-        video{
+        .videoElement {
             opacity: 0.15;
+        }        
+    }
+
+    &.-on {
+        .mask {
+            &:before {
+                content: " ";
+                left: auto;
+                right: 0;
+                animation: maskmove 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.15s 1 normal;
+            }
+
+            &__element {
+                white-space: normal;
+                display: inherit;
+                transform: translateX(0%);
+            }
         }
-        
     }
    
 }
@@ -866,6 +883,7 @@
     .partners{
         display: flex;
         flex-wrap: wrap;
+        align-items: baseline;
         li{
             list-style: none;
 

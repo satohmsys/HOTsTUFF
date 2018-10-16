@@ -103,15 +103,19 @@
 
 @keyframes maskmove{
     0%{
-        width: 0;
+        // width: 0;
+        transform: scaleX(0);
         left: 0;
     }
     50%{
-        width: 100%;
+        // width: 100%;
+        transform: scaleX( 1 );
     }
 
     100%{
-        width: 0;
+        // width: 0;
+        transform: scaleX(0);
+
         left: 101%;
     }
 }
