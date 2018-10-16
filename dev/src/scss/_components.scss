@@ -103,6 +103,7 @@
     }
 
     &__element {
+        overflow: hidden;
         white-space: normal;
         display: inherit;
         transform: translateX(0%);
@@ -132,7 +133,7 @@
             display: inline-block;
             transform: translateX( -100% );
             transition: transition(all, 0.5s);
-            transition-delay: 0.235s;
+            transition-delay: 0.2s;
             will-change: transform;            
         }
     }

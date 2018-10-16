@@ -1,4 +1,3 @@
-@charset "UTF-8";
 //////////////////////////////////////////
 
 //default setting
@@ -43,6 +42,10 @@ body{
 	margin-left: auto;
 	font-size: 1.4em;
 	letter-spacing: 0.1em;
+
+	@include mq( 1920,min ){
+		font-size: #{ (14 / 1366) * 100 }vw;
+	}
 
 	@include mq( tab ){
 		// padding-top: 60px;

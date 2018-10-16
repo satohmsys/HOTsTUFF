@@ -146,7 +146,7 @@ body{
 	color: #ffffff;
 	transition: transition( all, 0.45s);
 	transition-delay: 2s;
-	background-color: $gray_lighten;
+	background-color: #fff;
 
 	&:before{
 		content: " ";
@@ -160,7 +160,13 @@ body{
 		display: block;
 		transition: transition( all, 0.5s );
 		transition-delay: 1.5s;
-		background-color: #ffffff;
+		background: #E0EAFC;
+		/* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);
+		/* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+		/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 	}
 	@at-root .-is-loaded .loadingAnim{
 		transform: translateX(100%);
@@ -168,6 +174,11 @@ body{
 	@at-root .-is-loaded .loadingAnim:before{
 		width: 100%;
 	} 	
+
+
+	svg{
+		fill: $basefontColor;
+	}
 
 
 	&__copy{
@@ -259,7 +270,7 @@ body{
 	}
 
 	li{
-		width: 120px;
+		width: 8em;
 		line-height: 1;
 		margin-bottom: 10px;
 		list-style: none;

@@ -2,7 +2,7 @@
 @import "variables.scss";
 @import "fonts.scss";
 @import "mixins.scss";
-@import "./../../node_modules/slick-carousel/slick/slick";
+
 ////////////////////////////////////////
 
 
@@ -35,6 +35,17 @@
         bottom: 0;
         left: 0;
     }    
+
+    .mask,
+    .mask__element{
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
 }
 
 
@@ -101,6 +112,10 @@
         overflow: hidden;
         mix-blend-mode: overlay;
 
+        @include mq( 1920, min ){
+            font-size: 20vw;
+        }
+
         @include mq( sp ) {
             font-size: 8rem;
         }
@@ -116,7 +131,7 @@
 
         &__marquee{
             display: flex;
-            animation: marqueeee 65s linear infinite
+            animation: marqueeee 65s linear infinite;
         }
 
         span{
@@ -146,7 +161,7 @@
     &__copy{
         font-feature-settings: "palt";
         position: relative;
-        z-index: 2;
+        z-index: 5;
     }
 
 
@@ -192,7 +207,6 @@
     }
 
     &__copy__line{
-
         line-height: 1;
         padding: 5px;
         position: relative;
@@ -224,7 +238,6 @@
             @include mq( tab ){
                 display: none;
             }
-
         }
 
         .mask{
@@ -248,15 +261,15 @@
         bottom: 0;
         transition: transition();
 
-    		@include mq( tab ){
-                width: 90%;
-                padding-top: 95vh;
-                right: 0;
-            }
+        @include mq( tab ){
+            width: 90%;
+            padding-top: 95vh;
+            right: 0;
+        }
 
 
         .videoElement{
-            width: 100%;
+            // width: 100%;
             height: auto;
             margin: auto;
             position: absolute;
@@ -268,6 +281,10 @@
             transition: transtion();
 
 
+    		@include mq( 1920,min ){
+                height: 100%;
+                width: auto;
+            }
     		@include mq( tab ){
                 height: 100%;
                 width: auto;
@@ -276,26 +293,24 @@
 
 
         .mask{
-            width: 100%;
-            position: absolute;
-            top: 0;
-            bottom: 0;
 
-    		@include mq( tab ){
+            &,
+            &__element {
+                display: block;
+                width: 100%;
                 height: 100%;
-
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
             }
-
-
             &:before{
                 background-color: #ffffff;
                 animation-delay: 0.75s;
             }
             &__element{
-                height: 100%;
-                top: 0;
-                bottom: 0;
-                transition-delay: 1s;
+                overflow: hidden;
+                transition-delay: 0.65s;
             }
         }
     }
@@ -370,23 +385,17 @@
             left: 0;
         }
 
-        // .mask{        
-        //     width: 100%;
-        //     position: absolute;
-        //     top: 0;
-        //     bottom: 0;
+        .mask{        
+            &:before {
+                // background-color: #ffffff;
+                animation-delay: 0.75s;
+            }
 
-        //     &:before{
-        //         background-color: #ffffff;
-        //         animation-delay: 0.75s;
-        //     }
-        //     &__element{
-        //         height: 100%;
-        //         top: 0;
-        //         bottom: 0;
-        //         transition-delay: 1s;
-        //     }
-        // }        
+            &__element {
+                overflow: hidden;
+                transition-delay: 0.65s;
+            }
+        }        
     }
 
 }
@@ -755,14 +764,20 @@
 
                 @include mq(sp) {
                     margin-bottom: calc(-1em - #{$space_s});
+                }           
+
+                .mask {
+                    &:before {
+                        // background-color: #ffffff;
+                        animation-delay: 0.75s;
+                    }
+
+                    &__element {
+                        overflow: hidden;
+                        transition-delay: 1s;
+                    }
                 }
-
-
-                // @include mq( 1366 ){
-                //     mb
-                // }                
-            }
-            
+            }            
         }
 
         &__bg{
@@ -778,6 +793,15 @@
         }
 
         .mask{
+            &,
+            &__element{
+                display: block;
+            }
+
+            .videoElement{
+                width: 100%;
+                height: auto;
+            }
             &:before{
                 background-color: #ffffff;
             }
