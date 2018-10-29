@@ -48,10 +48,11 @@ body{
 
 		@include mq( 1920, min ){
 			width: 20vw;
+			height: 80px;
 		}
 		@include mq( sp ){
 			width: 35vw;
-			height: 60px;
+			height: 50px;
 		}
 	}
 	
@@ -150,35 +151,12 @@ body{
 	z-index: 20;
 	color: #ffffff;
 	transition: transition( all, 0.45s);
-	transition-delay: 2s;
+	transition-delay: 0.5s;
 	background-color: #fff;
 
-	&:before{
-		content: " ";
-		width: 0%;
-		height: 100%;
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;		
-		display: block;
-		transition: transition( all, 0.5s );
-		transition-delay: 1.5s;
-		background: #E0EAFC;
-		/* fallback for old browsers */
-		background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);
-		/* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to right, #CFDEF3, #E0EAFC);
-		/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-	}
 	@at-root .-is-loaded .loadingAnim{
 		transform: translateX(100%);
 	} 
-	@at-root .-is-loaded .loadingAnim:before{
-		width: 100%;
-	} 	
 
 
 	svg{
