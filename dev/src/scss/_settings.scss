@@ -43,7 +43,7 @@ body{
 	font-size: 1.4em;
 	letter-spacing: 0.1em;
 
-	@include mq( 1920,min ){
+	@include mq( 1921,min ){
 		font-size: #{ (14 / 1366) * 100 }vw;
 	}
 

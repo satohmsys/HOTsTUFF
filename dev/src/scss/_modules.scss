@@ -43,12 +43,16 @@ body{
 
 	&__button{
 		position: absolute;
+		height: 80px;
 		top: 0;
 		right: 0;
 
 		@include mq( 1920, min ){
 			width: 20vw;
-			height: 80px;
+		}
+
+		@include mq( tab ){
+			width: 35vw;
 		}
 		@include mq( sp ){
 			width: 35vw;
@@ -79,8 +83,12 @@ body{
 
 	&__logo{
 		line-height: 1;
+		margin-left: auto;
+		margin-right: auto;
 
 		@include mq( tab ){
+			margin-left: 0;
+			margin-right: 0;
 			position: relative;
 			z-index: 9;
 			img{
@@ -231,7 +239,7 @@ body{
 	right: 0;
 	transform: translateY( -50% );
 
-	@include mq( sp ){
+	@include mq( tab ){
 		width: 100%;
 		padding-bottom: 1em;
 		top: auto;
@@ -241,7 +249,7 @@ body{
 
 
 	ul{
-		@include mq( sp ){
+		@include mq( tab ){
 			width: 100%;
 			margin-right: 5%;
 			margin-left: 5%;
@@ -258,7 +266,7 @@ body{
 		margin-bottom: 10px;
 		list-style: none;
 
-		@include mq( sp ){
+		@include mq( tab ){
 			width: auto;
 			flex-shrink: 0;
 			&:after{
@@ -279,17 +287,22 @@ body{
 			width: 100%;
 			padding-top: 10px;
 			padding-bottom: 10px;
+			padding-left: 10px;
 			display: flex;
 			align-items: center;
 			position: relative;
 			color: #666666;
 			transition: transition();
 			font-family: $fontFamily_en;
+			background-color: rgba( #ffffff,0.7 );
 
-		@include mq( sp ){
+
+		// @include mq( tab ){
+		@include mq( tab ){
 			display: inline-block;
 			vertical-align: middle;
 			width: auto;
+			background-color: transparent;
 		}			
 
 
@@ -316,12 +329,12 @@ body{
 				bottom: 0;
 
 
-				@include mq( sp ){
+				@include mq( tab ){
 					display: none;
 				}				
 			}
 			&:after{
-				width: 40px;
+				width: 30px;
 				background-color: #666;
 			}
 			@include mouseOver(){
