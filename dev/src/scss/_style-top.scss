@@ -415,6 +415,10 @@
         max-width: 1070px;
         margin-right: auto;
         margin-left: auto;
+
+        @include mq( 1921, min ){
+            max-width: percentage(1070/1366);
+        }
     }
 
     .services{
@@ -556,9 +560,11 @@
 
 .section--features{
 
-    // .inner{
-    //     max-width: 800px;
-    // }
+    .inner{
+        @include mq( 1921, min ){
+            max-width: percentage(1070/1366);
+        }
+    }
 
     .features{
         margin-top: $space_s*-1;   
@@ -851,8 +857,8 @@
 .section--about {
 
     .section__child{
-        margin-top: 100px;
-        margin-bottom: 100px;
+        margin-top: #{(100/14)}em;
+        margin-bottom: #{(100/14)}em;
 
         @include mq( tab ){
             margin-right: auto;
@@ -866,13 +872,13 @@
 
         &__th,
         &__td{
-            padding-top: 30px;
-            padding-bottom: 30px;
+            padding-top: #{(30/14)}em;
+            padding-bottom: #{(30/14)}em;
             border-bottom: 1px solid $color_border;
         }
 
         &__th{
-            width: 170px;
+            width: 10em;
             text-align: left;
             font-family: $fontFamily_en;
             vertical-align: top;
@@ -881,10 +887,6 @@
             @include mq( sp ){
                 width: 140px;
             }
-        }
-
-        td,
-        th{
         }
     }
 

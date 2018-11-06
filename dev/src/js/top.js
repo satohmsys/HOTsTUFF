@@ -14,7 +14,7 @@ $( function(){
 			},
 			after: ( i,e ) => {
 				$(e[i]).addClass( 'current' );
-				indicatorActivator( $(e[i]).attr('id') );				
+				indicatorActivator( $(e[i]).attr('id') );
 			}
 		});
 
@@ -40,7 +40,7 @@ $( function(){
 				let $target = $( this );
 				$target.removeClass( 'current' );
 
-				if( '#' + activePrefix == $target.attr( 'href' ) ){
+				if ( 0 < $target.attr('href').indexOf(activePrefix) ){
 					$target.addClass( 'current' ); 
 				}
 			});
