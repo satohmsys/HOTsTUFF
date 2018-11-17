@@ -182,7 +182,7 @@
     &__element{
         display: inline-block;
         opacity: 0;
-        transform: translateY( -2rem );
+        transform: translateY( 2rem );
         transition: easeInOut(all, 0.5s);
         transition-delay: 0.2s;
         will-change: transform;           

@@ -224,23 +224,23 @@
 
 
 
-        &:after{
-            content: " ";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            display: block;
-            transition: transition();
-            opacity: 0.9;
-            background-color: #ffffff;
+        // &:after{
+        //     content: " ";
+        //     width: 100%;
+        //     height: 100%;
+        //     position: absolute;
+        //     top: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     display: block;
+        //     transition: transition();
+        //     opacity: 0.9;
+        //     background-color: #ffffff;
 
-            @include mq( tab ){
-                display: none;
-            }
-        }
+        //     @include mq( tab ){
+        //         display: none;
+        //     }
+        // }
 
         .mask{
             position: relative;
