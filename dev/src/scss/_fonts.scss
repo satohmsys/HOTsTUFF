@@ -17,6 +17,43 @@
 //   font-weight: normal;
 // }
 
+// @font-face {
+//   font-family: "YakuHanJP";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url("../fonts/YakuHanJP/YakuHanJP-Regular.eot");
+//   src: url("../fonts/YakuHanJP/YakuHanJP-Regular.woff2") format("woff2"),
+//   url("../fonts/YakuHanJP/YakuHanJP-Regular.woff") format("woff");
+// }
+
+@font-face {
+  font-family: "YakuHanJP";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/YakuHanJP/YakuHanJP-Regular.eot");
+  src: url("../fonts/YakuHanJP/YakuHanJP-Regular.woff2") format("woff2"),
+    url("../fonts/YakuHanJP/YakuHanJP-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "YakuHanJP";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/YakuHanJP/YakuHanJP-Bold.eot");
+  src: url("../fonts/YakuHanJP/YakuHanJP-Bold.woff2") format("woff2"),
+    url("../fonts/YakuHanJP/YakuHanJP-Bold.woff") format("woff");
+}
+
+// @font-face {
+//   font-family: "YakuHanJP";
+//   font-style: normal;
+//   font-weight: 900;
+//   src: url("../fonts/YakuHanJP/YakuHanJP-Black.eot");
+//   src: url("../fonts/YakuHanJP/YakuHanJP-Black.woff2") format("woff2"),
+//   url("../fonts/YakuHanJP/YakuHanJP-Black.woff") format("woff");
+// }
+
+
 
 // 【明朝】　font-family:Times New Roman , "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", Hiragino Mincho ProN , "MSP明朝","MS PMincho","MS 明朝",serif;
 // 【ゴシック】　font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;

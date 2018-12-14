@@ -106,39 +106,29 @@
         z-index: -1;
         left: 0;
         right: 0;
-        bottom: -0.1em;
+        bottom: -0em;
+        opacity: 0.8;
         color: #f7f7f7;
-        font-size: 20rem;
+        font-size: 15rem;
         font-family: $fontFamily_en;
         font-weight: 400;
         overflow: hidden;
         mix-blend-mode: overlay;
+        display: block;
+
+        animation: marqueeee 65s linear infinite;
+        background-position: left center;
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+
 
         @include mq( 1920, min ){
-            font-size: 20vw;
+            font-size: 17vw;
         }
 
         @include mq( sp ) {
             font-size: 8rem;
-        }
-
-
-        &__wrap{
-            width: 100%;
-            position: absolute;
-            left: 50%;
-            transform: translateX( -75% );
-            white-space: nowrap;
-        }
-
-        &__marquee{
-            display: flex;
-            animation: marqueeee 65s linear infinite;
-        }
-
-        span{
-            margin-right: 0.25em;
-        }        
+        } 
     }
 }
 
@@ -399,6 +389,10 @@
         }        
     }
 
+    .section__ticker{
+      background-image: url(../img/vision-marquee.svg);
+    }
+
 }
 
 
@@ -548,6 +542,9 @@
         }
     }
 
+    .section__ticker {
+      background-image: url(../img/services-marquee.svg);
+    }
 }
 
 
@@ -636,6 +633,7 @@
 
                 }
                 &__ja{
+                  line-height: 1;
                     font-weight: bold;
                     font-size: $fontsize_index_s;
                     transition: transition(all, 0.5s );
@@ -707,6 +705,10 @@
                 }
             }
         }
+    }
+
+    .section__ticker {
+      background-image: url(../img/features-marquee.svg);
     }
 }
 

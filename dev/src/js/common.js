@@ -140,7 +140,5 @@ if ($w.width() < 1024) {
 	});
 }
 
-
-export { $ };
 export { $w };
 export { getScrollVal };

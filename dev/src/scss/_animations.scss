@@ -8,10 +8,12 @@
 
 @keyframes marqueeee{
     0%{
-        transform: translateX( 0 );        
+      background-position: 0 center;
+        // transform: translateX( 0 );        
     }    
     100%{
-        transform: translateX( 48% );        
+      background-position: 4500px center;
+        // transform: translateX( 48% );        
     }    
 }
 

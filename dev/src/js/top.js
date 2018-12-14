@@ -3,19 +3,24 @@ import { getScrollVal, $w } from './common.js';
 import 'jquery-scrollify';
 
 
-$( function(){
 	if (1024 < $w.width() && $('.siteNav').hasClass( '-is-scrollify-active')){
 		$.scrollify({
 			section: ".section",
 			updateHash: false,
 			before: (i, e) => {
+        console.log($(e[i]).siblings())
 				$(e[i]).siblings().removeClass('current')
 				indicatorActivator($(e[i]).attr('id'));				
 			},
 			after: ( i,e ) => {
 				$(e[i]).addClass( 'current' );
 				indicatorActivator( $(e[i]).attr('id') );
-			}
+			},
+      afterRender: () => {
+        // $.each( $( '.section' ), function( e ){
+        //   $( this ).addClass( 'current' )
+        // });
+      }
 		});
 
 
@@ -48,18 +53,16 @@ $( function(){
 	}
 	
 
-
-	/**
-	 * current Section 
-	 */
-	$w.on('load', function (e) {
-		let $hash = location.hash;
-		if ($hash.length) {
-			$($hash).addClass('current');
-		} else {
-			$('.section').eq(0).addClass('current');
-		}
-	});
-
+/**
+ * current Section 
+ */
+$w.on('load', function (e) {
+  let $hash = location.hash;
+  if ($hash.length) {
+    $($hash).addClass('current');
+  } else {
+    $('.section').eq(0).addClass('current');
+  }
 });
+
 
