@@ -206,10 +206,11 @@
         display: inline-block;
 
         @include mq( tab ){
-            line-height: 2;
+          padding: 0;
+          line-height: 2;
         }
         @include mq( 320 ){
-            line-height: 1.85;
+          line-height: 1.85;
         }
 
 
@@ -303,6 +304,21 @@
                 overflow: hidden;
                 transition-delay: 0.65s;
             }
+        }
+        .imgElement{
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: url(../img/mv-video-poster.jpg) left center no-repeat;
+          background-size: auto 100%;
+          
+
+
         }
     }
 

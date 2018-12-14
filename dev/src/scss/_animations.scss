@@ -121,3 +121,24 @@
         left: 101%;
     }
 }
+
+@keyframes loadingmaskmove {
+  0% {
+    // width: 0;
+    transform: scaleX(0);
+    left: 0;
+  }
+
+  50% {
+    // width: 100%;
+    left: 0;
+    transform: scaleX(1);
+  }
+
+  70% {
+    // width: 0;
+    transform: scaleX(0);
+
+    left: 101%;
+  }
+}

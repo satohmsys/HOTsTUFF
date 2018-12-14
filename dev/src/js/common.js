@@ -76,51 +76,27 @@ getScrollVal(f2);
 /**
  * loading
  */
-let $loadingAnim = $('.loadingAnim');
+let $loadingAnim = $('.loadingAnim');zs
 
-if ($loadingAnim.length ) {
-	new Promise(( resolve ) => {
-		window.addEventListener('load', () =>{
-			document.body.classList.add('-is-ready');
-		})
-		resolve( );
-	}).then(( resolve ) => {
-		document.querySelector('.loadingAnim .mask__element').addEventListener('transitionend', ( e ) => {
-			e.stopPropagation();
-			document.body.classList.add('-is-loaded');
-		});
-	}).then(( resolve ) => {
-		document.getElementsByClassName('loadingAnim')[0].addEventListener('transitionend', (e) => {
-			e.stopPropagation();
-			if (e.propertyName == 'transform'){
-				setTimeout(() => {
-					$loadingAnim.remove();
-				}, 1500); 
-			}
-			document.body.classList.add('-is-loadend');
-		});
-	});
+if ($loadingAnim.length) {
+  $w.on('load', function () {
+    $('body').addClass('-is-ready');
 
-	// if ($loadingAnim.length) {
-	// 	$w.on('load', function () {
-	// 		$('body').addClass('-is-ready');
+    $('.loadingAnim .mask__element').on('transitionend', function (e) {
+      e.stopPropagation();
+      e.preventDefault();
 
-	// 		$('.loadingAnim .mask__element').on('transitionend', function (e) {
-	// 			e.stopPropagation();
-	// 			e.preventDefault();
+      $('body').addClass('-is-loaded');
 
-	// 			$('body').addClass('-is-loaded');
-
-	// 			$('.loadingAnim').on('transitionend', function (e) {
-	// 				e.stopPropagation();
-	// 				$('body').addClass('-is-loadend');
-	// 				// $loadingAnim.remove();
-	// 			});
-	// 		});
-	// 	});
-	// }
-
+      $('.loadingAnim').on('transitionend', function (e) {
+        e.stopPropagation();
+        $('body').addClass('-is-loadend');
+        // $loadingAnim.remove();
+      });
+    });
+  });
 }
+
 
 /**
  * smooth scroll
@@ -131,9 +107,9 @@ if ($w.width() < 1024) {
 		e.preventDefault();
 
 		var speed = 500,
-			href = $(this).attr("href"),
-			target = $(href == "#" || href == "" ? 'html' : href),
-			position = target.offset().top;
+        href = $(this).attr("href"),
+        target = $(href == "#" || href == "" ? 'html' : href),
+        position = target.offset().top;
 
 		$("html, body").animate({ scrollTop: position }, speed, "swing");
 		return false;
