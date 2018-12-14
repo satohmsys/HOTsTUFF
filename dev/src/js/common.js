@@ -76,7 +76,7 @@ getScrollVal(f2);
 /**
  * loading
  */
-let $loadingAnim = $('.loadingAnim');zs
+let $loadingAnim = $('.loadingAnim');
 
 if ($loadingAnim.length) {
   $w.on('load', function () {
