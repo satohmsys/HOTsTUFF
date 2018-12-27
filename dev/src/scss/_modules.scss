@@ -88,7 +88,8 @@ body{
 
 
     img{
-      transition: transition();
+      transition: transform 0.6s ease-in-out 0s,
+                  opacity 0.6s linear 0s;
       transform-origin: center top;  
     }
 
@@ -110,9 +111,12 @@ body{
 
   @at-root .-is-ci-appear{
     .siteHeader__logo img{
+      transition: transform 0.6s ease-in-out 0s,
+      opacity 0.15s linear 0s;
       transform: scale(4);
-      transition-delay: 1.5s;
+      // transition-delay: 1.5s;
       opacity: 0.035;
+      mix-blend-mode: multiply;
     }
   }
 }
