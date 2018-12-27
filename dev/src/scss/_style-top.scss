@@ -925,4 +925,17 @@
         }
     }
 
+
+      .logos {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+
+          li {
+            padding: 10px;
+            border: 1px solid $color_border;
+            list-style: none;
+          }
+        }
+
 }

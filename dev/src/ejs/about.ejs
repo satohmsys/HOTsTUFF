@@ -65,8 +65,20 @@
                     </header>
                     <div class="section__content">
                       <ul class="partners">
-                        <% var $partners = new Array('株式会社A','株式会社B','株式会社C','株式会社D','株式会社E','株式会社F','株式会社G'); %>
-                          <% $partners.forEach( function( e ){ %><li><%- e %></li><% }) %>
+                        <% var $partners = new Array('東急建設株式会社','東急リニューアル株式会社','株式会社京急百貨店','株式会社セゾンファンデックス','アイデックス株式会社','株式会社岩清','バルロジスティクス株式会社'); %>
+                        <% $partners.forEach( function( e ){ %><li><%- e %></li><% }) %>
+                      </ul>
+                    </div>
+                </section>                                    
+                <section class="section__child inner">
+                    <header class="section__index">
+                        <p class="section__index__en"><span class="fade"><span class="fade__element">GROUP COMPANY</span></span></p>
+                        <h2 class="section__index__ja"><span class="fade"><span class="fade__element">グループ企業</span></span></h2>
+                    </header>
+                    <div class="section__content">
+                      <ul class="logos">
+                        <li><a href="https://www.innorea.co.jp/" target="_blank">
+                        <img src="<%- $path %>../img/about-group-innoreaestate.jpg" width="193" alt=""></a></li>
                       </ul>
                     </div>
                 </section>                                    

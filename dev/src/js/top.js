@@ -8,7 +8,12 @@ import 'jquery-scrollify';
 			section: ".section",
 			updateHash: false,
 			before: (i, e) => {
-        console.log($(e[i]).siblings())
+
+        if (i === 1 ){
+          $('body').addClass('-is-ci-appear')
+        } else {
+          $('body').removeClass('-is-ci-appear')
+        }
 				$(e[i]).siblings().removeClass('current')
 				indicatorActivator($(e[i]).attr('id'));				
 			},
