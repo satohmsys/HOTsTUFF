@@ -9,11 +9,11 @@ import 'jquery-scrollify';
 			updateHash: false,
 			before: (i, e) => {
 
-        if (i === 1 ){
-          $('body').addClass('-is-ci-appear')
-        } else {
-          $('body').removeClass('-is-ci-appear')
-        }
+        // if (i === 1 ){
+        //   $('body').addClass('-is-ci-appear')
+        // } else {
+        //   $('body').removeClass('-is-ci-appear')
+        // }
 				$(e[i]).siblings().removeClass('current')
 				indicatorActivator($(e[i]).attr('id'));				
 			},
