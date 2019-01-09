@@ -59,22 +59,21 @@ body{
 			height: 50px;
 		}
 	}
-	
 
-	@include mq( tab ){
-
-	}
-	
-	
 	
 	
 	 > .wrap{
+     width: 90%;
 		 height: 100px;
 		 display: flex;
 		 flex-direction: row;
 		 justify-content: space-between;
 		 align-items: center;
 		
+
+    @include mq(tab) {
+      max-width: percentage(670 / 750);
+    }
 
 		@include mq( sp ){
 			height: 60px;
@@ -87,11 +86,12 @@ body{
 		margin-right: auto;
 
 
-    // img{
-    //   transition: transform 0.6s ease-in-out 0s,
-    //               opacity 0.6s linear 0s;
-    //   transform-origin: center top;  
-    // }
+    img{
+      @include mq( 1366,min ){
+        max-width: 300px;
+        width: 10vw;
+      }
+    }
 
 		@include mq( tab ){
 			margin-left: 0;

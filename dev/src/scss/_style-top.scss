@@ -874,6 +874,12 @@
 
 .section--about {
 
+  .wrap{
+    @include mq(tab,min) {
+      width: 70%;
+    }
+  }
+
     .section__child{
         margin-top: #{(100/14)}em;
         margin-bottom: #{(100/14)}em;
