@@ -22,6 +22,7 @@ body{
 /////// ヘッダー ラッパー
 .siteHeader
 {
+  line-height: 0;
 	position: fixed;
 	z-index: 9;
 	top: 0;
@@ -29,6 +30,7 @@ body{
 	left: 0;
 	transition: transition(all,0.5s);
 	transition-delay: 1s;
+  background-color: #ffffff;
 	// transform: translateY( -100% );
 
 	// @at-root .-is-loadend .siteHeader{
@@ -64,7 +66,7 @@ body{
 	
 	 > .wrap{
      width: 90%;
-		 height: 100px;
+		 height: 80px;
 		 display: flex;
 		 flex-direction: row;
 		 justify-content: space-between;
@@ -73,6 +75,7 @@ body{
 
     @include mq(tab) {
       max-width: percentage(670 / 750);
+      height: auto;
     }
 
 		@include mq( sp ){
